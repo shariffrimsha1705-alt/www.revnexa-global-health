@@ -1,72 +1,60 @@
 export default function RevnexaWebsite() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="px-10 py-6 shadow-sm flex items-center justify-between bg-white sticky top-0">
+      <header className="px-10 py-6 shadow-sm flex items-center justify-between bg-white sticky top-0 z-10">
         <div className="flex items-center gap-4">
           <img src="/mnt/data/rev.jpeg" alt="Revnexa Logo" className="h-16 rounded-xl" />
           <div>
-            <h1 className="text-2xl font-bold tracking-tight">Revnexa Global Health</h1>
-            <p className="text-sm text-slate-500">Premium RCM & CRM Solutions</p>
+            <h1 className="text-2xl font-bold">Revnexa Global Health</h1>
+            <p className="text-sm text-slate-500">Premium RCM for U.S. Practices</p>
           </div>
         </div>
-        <button className="px-5 py-2 rounded-2xl shadow-md border font-medium">Book Consultation</button>
+        <button className="px-5 py-2 rounded-2xl shadow-md border font-medium">Book Free Consultation</button>
       </header>
 
       <section className="px-10 py-24 text-center bg-slate-50">
-        <h2 className="text-5xl font-bold mb-5 max-w-4xl mx-auto">Revenue Cycle Excellence for U.S. Healthcare Providers</h2>
+        <h2 className="text-5xl font-bold mb-5 max-w-4xl mx-auto">Reduce Claim Denials & Improve Cash Flow</h2>
         <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-          Premium offshore support delivering medical billing accuracy, denial recovery, and stronger collections for physician practices and healthcare groups.
+          Premium India-based revenue cycle management built for U.S. doctors, physician groups, and healthcare providers.
         </p>
+        <div className="mt-8 flex justify-center gap-4 flex-wrap">
+          <button className="px-8 py-3 rounded-2xl shadow-md border font-semibold">Start Consultation</button>
+          <button className="px-8 py-3 rounded-2xl border">Email Us</button>
+        </div>
       </section>
 
       <section className="px-10 py-16 text-center">
-        <h3 className="text-3xl font-bold mb-4">About Us</h3>
-        <p className="max-w-3xl mx-auto text-slate-600">
-          Revnexa Global Health provides dedicated healthcare revenue cycle management support from India, helping U.S. medical providers improve reimbursement performance with precision and reliability.
-        </p>
+        <h3 className="text-3xl font-bold mb-4">Why Doctors Choose Revnexa</h3>
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="p-6 rounded-2xl shadow-md border">Lower AR Aging</div>
+          <div className="p-6 rounded-2xl shadow-md border">Faster Reimbursement</div>
+          <div className="p-6 rounded-2xl shadow-md border">Dedicated Revenue Team</div>
+        </div>
       </section>
 
       <section className="px-10 py-16 grid md:grid-cols-3 gap-6">
-        {['AR Medical Billing','Claim Submission','Charge Entry','AR Follow Up','Denial Management','Verification Of Benefits'].map((service) => (
-          <div key={service} className="rounded-2xl shadow-md p-6 border bg-white hover:shadow-lg transition">
+        {['AR Medical Billing','Claim Submission','Denial Management'].map((service) => (
+          <div key={service} className="rounded-2xl shadow-md p-6 border bg-white">
             <h3 className="text-xl font-semibold">{service}</h3>
           </div>
         ))}
       </section>
 
-      <section className="px-10 py-16 bg-slate-50 text-center">
-        <h3 className="text-3xl font-bold mb-4">Why U.S. Providers Choose Revnexa</h3>
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <div className="p-6 rounded-2xl shadow-md border">Faster Claims Resolution</div>
-          <div className="p-6 rounded-2xl shadow-md border">Reduced Revenue Leakage</div>
-          <div className="p-6 rounded-2xl shadow-md border">Dedicated Offshore Support</div>
-        </div>
-      </section>
-
-      <section className="px-10 py-16 text-center bg-slate-100">
+      <section className="px-10 py-16 bg-slate-100 text-center">
         <h3 className="text-3xl font-bold mb-4">HIPAA-Focused Trust</h3>
         <p className="max-w-3xl mx-auto text-slate-600">
-          Secure workflow handling, confidentiality-first operations, and compliance-aware support built for healthcare business standards.
+          Secure workflow handling and compliance-focused support designed for healthcare business operations.
         </p>
       </section>
 
-      <section className="px-10 py-16 text-center">
-        <h3 className="text-3xl font-bold mb-4">Trusted Healthcare Support</h3>
-        <div className="flex justify-center gap-6 flex-wrap">
-          <span className="px-4 py-2 border rounded-xl">U.S. Billing Standards</span>
-          <span className="px-4 py-2 border rounded-xl">Revenue Focused</span>
-          <span className="px-4 py-2 border rounded-xl">Provider Ready</span>
-        </div>
-      </section>
-
       <section className="px-10 py-16 max-w-3xl mx-auto rounded-2xl shadow-md bg-slate-50">
-        <h3 className="text-3xl font-bold mb-6 text-center">Request a Consultation</h3>
-        <div className="grid gap-4">
-          <input className="border rounded-xl p-3" placeholder="Your Name" />
-          <input className="border rounded-xl p-3" placeholder="Your Email" />
-          <textarea className="border rounded-xl p-3" rows="4" placeholder="Tell us about your practice needs"></textarea>
-          <button className="px-6 py-3 rounded-2xl shadow-md border font-semibold">Send Inquiry</button>
-        </div>
+        <h3 className="text-3xl font-bold mb-6 text-center">Contact Us</h3>
+        <form action="https://formspree.io/f/yourformid" method="POST" className="grid gap-4">
+          <input name="name" className="border rounded-xl p-3" placeholder="Doctor / Practice Name" />
+          <input name="email" className="border rounded-xl p-3" placeholder="Email" />
+          <textarea name="message" className="border rounded-xl p-3" rows="4" placeholder="Tell us your billing challenges"></textarea>
+          <button type="submit" className="px-6 py-3 rounded-2xl shadow-md border font-semibold">Send Inquiry</button>
+        </form>
       </section>
 
       <footer className="px-10 py-10 mt-16 bg-slate-900 text-white text-center">
